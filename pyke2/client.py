@@ -1,4 +1,4 @@
-"""Async client for the KE2 LDA (Local Device Adapter) JSON API.
+"""Async client for the KE2 LDA (Local Area Dashboard and Alarms) JSON API.
 
 Reads need no auth. Writes need a ``modbus`` session, sent as the ``modbusSessionID``
 cookie. The LDA's nginx 302-redirects any request whose Host header isn't its IP to

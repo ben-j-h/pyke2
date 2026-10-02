@@ -1,7 +1,7 @@
 # KE2 Therm controllers via the KE2 LDA — Reverse-Engineering Notes
 
 Target: a **KE2 Temp** refrigeration thermostat (Modbus address 1, firmware id 20643,
-version 1.11) on RS-485 behind a **KE2 LDA** (Local Device Adapter) network bridge,
+version 1.11) on RS-485 behind a **KE2 LDA** (Local Area Dashboard and Alarms) network bridge,
 LDA software **V1.3.2** (build 2017-05-05, commit `36a30eb`).
 
 Captured 2026-09-30 → 2026-10-02 against `http://192.168.30.165` (an LDA on a
@@ -50,6 +50,7 @@ captured responses are in `samples/`.
 | [`02-data-model.md`](02-data-model.md) | The `limits` schema, data types, special values, per-model fields, the KE2 Temp field dictionary |
 | [`03-live-test-results.md`](03-live-test-results.md) | What writes actually did on the real controller, timings, quirks |
 | [`04-home-assistant-architecture.md`](04-home-assistant-architecture.md) | Library + integration design, entity mapping |
+| [`05-direct-modbus.md`](05-direct-modbus.md) | Talking Modbus RTU to the controller without the LDA: known registers, capture plan, ESP32/ESPHome target (parked) |
 | `samples/` | Captured JSON responses (fixtures for the library's tests) |
 | `raw/` | Downloaded LDA web-app bundles used for the RE (git-ignored, vendor code) |
 

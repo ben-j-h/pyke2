@@ -1,7 +1,7 @@
 # pyke2
 
 Async Python client for **KE2 Therm** refrigeration controllers (KE2 Temp, KE2 Low Temp,
-KE2 Adaptive, …) through the **KE2 LDA** (Local Device Adapter), the small network
+KE2 Adaptive, …) through the **KE2 LDA** (Local Area Dashboard and Alarms), the small network
 box that bridges a controller's RS-485 Modbus bus to a local JSON API. Local only: no
 cloud, no KE2 account.
 
