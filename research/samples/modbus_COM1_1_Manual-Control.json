@@ -1,0 +1,5 @@
+{
+  "Status": 404,
+  "Message": "Device Not Found",
+  "Details": "The device requested is not present"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "Status": {
+      "Relay": "Relay Off",
+      "RoomTemperature": 57.5,
+      "SystemMode": "Off",
+      "Alarms": []
+    },
+    "Setpoints": {
+      "RoomTemperature": 60,
+      "AirTempDiff": 5,
+      "Start Time of Defrost 4": "24:00",
+      "Compressor Starts Per Hour": 6,
+      "Start Time of Defrost 5": "24:00",
+      "Start Time of Defrost 3": "24:00",
+      "DefrostsPerDay": 2,
+      "Time of Day": "07:47",
+      "Start Time of Defrost 10": "24:00",
+      "Start Time of Defrost 1": "24:00",
+      "Start Time of Defrost 2": "24:00",
+      "Start Time of Defrost 7": "24:00",
+      "Start Time of Defrost 6": "24:00",
+      "Start Time of Defrost 8": "24:00",
+      "Start Time of Defrost 9": "24:00",
+      "Start Time of Defrost 11": "24:00",
+      "Start Time of Defrost 12": "24:00",
+      "Defrost Time": 20,
+      "HiTempAlarmOffset": 5,
+      "LowTempAlarmOffset": 3,
+      "HighAndLowAlarmDelay": 90,
+      "ModbusAddress": 1,
+      "Temperature Units": "Fahrenheit"
+    },
+    "Device Info": {
+      "address": 1,
+      "commTimeouts": 0,
+      "firmware_id": 20643,
+      "actual_version": "1.11",
+      "name": "KE2 Temp",
+      "device_name": null
+    }
+  }
+]

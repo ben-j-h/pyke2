@@ -1,0 +1,10 @@
+{
+  "Device Info": {
+    "address": 1,
+    "commTimeouts": 0,
+    "firmware_id": 20643,
+    "actual_version": "1.11",
+    "name": "KE2 Temp",
+    "device_name": null
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "Status": {
+    "Relay": {
+      "Options": {
+        "Discrete": [
+          "Relay Off",
+          "Relay On"
+        ]
+      },
+      "Editable": false,
+      "DataType": "Table"
+    },
+    "RoomTemperature": {
+      "Options": {
+        "Special Values": {
+          "999.9": "Short Sensor",
+          "888.8": "Open Sensor"
+        }
+      },
+      "Editable": false,
+      "ShowUnit": "Temperature",
+      "DataType": "Decimal"
+    },
+    "SystemMode": {
+      "Options": {
+        "Discrete": [
+          "Unknown",
+          "Refrigerate",
+          "Off",
+          "Defrost"
+        ]
+      },
+      "Editable": false,
+      "DataType": "Table-Bitmap"
+    },
+    "Alarms": {
+      "Options": {
+        "Discrete": [
+          "Air Temp Sensor Open",
+          "Air Temp Sensor Short",
+          "High Air Temp",
+          "Low Air Temp"
+        ]
+      },
+      "Editable": false,
+      "DataType": "Bitmap"
+    }
+  },
+  "Setpoints": {
+    "RoomTemperature": {
+      "Options": {
+        "Min": {
+          "Fahrenheit": -50,
+          "Celsius": -45
+        },
+        "Max": {
+          "Fahrenheit": 100,
+          "Celsius": 38
+        }
+      },
+      "Editable": true,
+      "ShowUnit": "Temperature",
+      "DataType": "Integer"
+    },
+    "AirTempDiff": {
+      "Options": {
+        "Min": {
+          "Fahrenheit": 1,
+          "Celsius": 1
+        },
+        "Max": {
+          "Fahrenheit": 30,
+          "Celsius": 17
+        }
+      },
+      "Editable": true,
+      "ShowUnit": "Temperature",
+      "DataType": "Integer"
+    },
+    "Start Time of Defrost 4": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Compressor Starts Per Hour": {
+      "Options": {
+        "Min": 5,
+        "Max": 10,
+        "Discrete": [
+          0
+        ],
+        "Special Values": {
+          "0": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Integer"
+    },
+    "Start Time of Defrost 3": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Start Time of Defrost 5": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "DefrostsPerDay": {
+      "Options": {
+        "Min": 0,
+        "Max": 13,
+        "Special Values": {
+          "13": "Custom"
+        }
+      },
+      "Editable": true,
+      "DataType": "Integer"
+    },
+    "Start Time of Defrost 10": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Time of Day": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "23:59"
+      },
+      "Editable": true,
+      "DataType": "Time"
+    },
+    "Start Time of Defrost 1": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Start Time of Defrost 7": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Start Time of Defrost 2": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Start Time of Defrost 6": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Start Time of Defrost 8": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Start Time of Defrost 9": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Start Time of Defrost 11": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Start Time of Defrost 12": {
+      "Options": {
+        "Min": "00:00",
+        "Max": "24:00",
+        "Special Values": {
+          "24:00": "Disabled"
+        }
+      },
+      "Editable": true,
+      "DataType": "Time_Hours"
+    },
+    "Defrost Time": {
+      "Options": {
+        "Min": 0,
+        "Max": 720
+      },
+      "Editable": true,
+      "DataType": "Integer"
+    },
+    "HiTempAlarmOffset": {
+      "Options": {
+        "Min": {
+          "Fahrenheit": 1,
+          "Celsius": 1
+        },
+        "Max": {
+          "Fahrenheit": 10,
+          "Celsius": 6
+        }
+      },
+      "Editable": true,
+      "ShowUnit": "Temperature",
+      "DataType": "Integer"
+    },
+    "LowTempAlarmOffset": {
+      "Options": {
+        "Min": {
+          "Fahrenheit": 1,
+          "Celsius": 1
+        },
+        "Max": {
+          "Fahrenheit": 10,
+          "Celsius": 6
+        }
+      },
+      "Editable": true,
+      "ShowUnit": "Temperature",
+      "DataType": "Integer"
+    },
+    "HighAndLowAlarmDelay": {
+      "Options": {
+        "Min": 1,
+        "Max": 180
+      },
+      "Editable": true,
+      "DataType": "Integer"
+    },
+    "ModbusAddress": {
+      "Options": {
+        "Min": 1,
+        "Max": 247
+      },
+      "Editable": true,
+      "DataType": "Integer"
+    },
+    "Temperature Units": {
+      "Options": {
+        "Discrete": [
+          "Fahrenheit",
+          "Celsius"
+        ]
+      },
+      "Editable": true,
+      "DataType": "Table"
+    }
+  }
+}

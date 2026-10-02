@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyke2"
+dynamic = ["version"]
+description = "Async client for KE2 Therm refrigeration controllers via the KE2 LDA network adapter"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Ben Harr" }]
+requires-python = ">=3.12"
+dependencies = ["aiohttp>=3.9"]
+keywords = ["ke2", "ke2therm", "refrigeration", "modbus", "home-assistant"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Home Automation",
+]
+
+[dependency-groups]
+# `uv sync` installs this by default. aioresponses doesn't support aiohttp 3.14 yet.
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "aioresponses>=0.7.6",
+    "aiohttp>=3.9,<3.14",
+    "ruff>=0.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/ben-j-h/pyke2"
+Issues = "https://github.com/ben-j-h/pyke2/issues"
+
+[project.scripts]
+pyke2 = "pyke2.__main__:main"
+
+[tool.hatch.version]
+path = "pyke2/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["research/raw", ".venv", "bin", "lib", "lib64", "include", "pyvenv.cfg"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pyke2"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["research", "bin", "lib", "lib64", "include"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "ASYNC", "RUF"]
+ignore = ["ASYNC109"]

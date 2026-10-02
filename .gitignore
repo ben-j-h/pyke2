@@ -1,0 +1,20 @@
+# local venv (repo root doubles as a venv during early RE)
+bin/
+lib/
+lib64
+include/
+pyvenv.cfg
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# local credentials for the early prototype
+pyke2/config.py
+
+# vendor web-app bundles downloaded from the LDA (not ours to redistribute)
+research/raw/
