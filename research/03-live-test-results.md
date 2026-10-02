@@ -19,9 +19,11 @@ physical effect is confirmed, not just the API's reply.
 | Date (PT) | Request | API reply | Physical effect |
 |-----------|---------|-----------|-----------------|
 | 2026-10-02 05:56:47 | `PUT /modbus/COM1/1/Setpoints {"RoomTemperature":60}` (room 57.1 °F, compressor short-cycling) | `{"Status":200,"Message":"Success","Details":"Data Successfully written"}` | Read-back `60` and `Relay Off` / mode `Off` by 05:56:57. Compressor circuit fell 900 W → 120 W (fan only) by 05:57:00 |
+| 2026-10-02 07:10:30 | `PUT …/Setpoints {"Time of Day":"07:10"}` via ha-ke2 *Sync controller clock* | `Success` | Read-back still `08:46` after ~10 s (ha-ke2 0.1.0 raised "not confirmed"); `07:10` by 07:11:18. **Clock writes apply ~10–40 s late.** ha-ke2 0.1.1 re-polls up to ~30 s |
 | 2026-10-02 06:00:33 | Same via HA `rest_command` (`Cookie: modbusSessionID=…`), value unchanged (60) | `Success` | n/a (no-op), confirms the HA write path |
 
-**Latency:** write → relay change ≤ 10 s. Write → `/all` read-back ≤ 10 s.
+**Latency:** setpoint write → relay change ≤ 10 s, read-back ≤ 10 s. `Time of Day` read-back
+took longer (> 10 s, < 50 s). Confirm writes by re-polling, not with a single read.
 
 ## Behaviour notes
 
@@ -41,5 +43,5 @@ physical effect is confirmed, not just the API's reply.
 * `POST …/GotoNextMode`: expected to step Refrigerate → Off → Defrost. Test when a
   forced defrost is harmless.
 * Session lifetime / expiry, and concurrent sessions.
-* Writing `Time of Day`, `Temperature Units`, `DefrostsPerDay = 13` + schedule.
+* Writing `Temperature Units`, `DefrostsPerDay = 13` + schedule.
 * What `/all` returns when the LDA has lost the Modbus link (no capture yet).
